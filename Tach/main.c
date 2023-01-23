@@ -7,6 +7,7 @@
 void main(void)
 {
 	WDTCTL = WDTPW | WDTHOLD;		// stop watchdog timer
+	PM5CTL0 &= ~LOCKLPM5;           // disable high-impedance mode by clearing LOCKLPM5 bit in PM5CTL0
 	P1DIR |= 0x01;					// configure P1.0 as output
 
 	volatile unsigned int i;		// volatile to prevent optimization
