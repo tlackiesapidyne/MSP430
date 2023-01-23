@@ -14,6 +14,6 @@ void main(void)
 	while(1)
 	{
 		P1OUT ^= 0x01;				// toggle P1.0
-		for(i=10000; i>0; i--);     // delay
+		for(i=20000; i>0; i--);     // delay
 	}
 }
