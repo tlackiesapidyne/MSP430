@@ -44,12 +44,6 @@ void main(void)
 
 	init_CS();
 
-/*	do
-	{
-	    CSCTL7 &= ~(XT1OFFG | DCOFFG);                // Clear XT1 and DCO fault flag
-	    SFRIFG1 &= ~OFIFG;
-	}while (SFRIFG1 & OFIFG);                         // Test oscillator fault flag
-*/
 	PM5CTL0 &= ~LOCKLPM5;           // disable high-impedance mode by clearing LOCKLPM5 bit in PM5CTL0
 
 	TB3CCR0 = 100-1;                // PWM Period
