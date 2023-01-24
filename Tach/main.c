@@ -39,8 +39,8 @@ void main(void)
 	WDTCTL = WDTPW | WDTHOLD;		// stop watchdog timer
 
 	P1DIR |= 0x01;					// configure P1.0 as output
-	P6DIR |= BIT6;                  // configure P6.6 as output
-	P6SEL0 |= BIT6;                 // options select
+	P6DIR |= BIT0;                  // configure P6.6 as output
+	P6SEL0 |= BIT0;                 // options select
 
 	init_CS();
 
